@@ -26,3 +26,55 @@ Select the files and click on **Action**; click on **make public using ACL**
 
 
 
+# CloudFront Distribution Setup
+
+## 1. Access and Create Distribution
+
+1. **Access CloudFront**:  
+   In the AWS Management Console, navigate to the CloudFront service.  
+   ![image](https://github.com/user-attachments/assets/1e3df9cb-5384-4cec-810f-294540b482f6)
+
+
+2. **Create a New Distribution**:  
+   Click on `Create Distribution` and choose the `Web` option for distribution.
+
+   ![image](https://github.com/user-attachments/assets/ee76cbfd-51fa-4e22-ad8a-decce9012ddd)
+
+
+---
+
+## 2. Configure Origin and Viewer Settings
+
+1. **Origin Domain Name**:  
+   Select your S3 bucket from the dropdown list in the origin configuration section.
+
+2. **Origin Path (Optional)**:  
+   If you want to restrict access to specific content, specify the path within your S3 bucket.
+
+3. **Viewer Protocol Policy**:  
+   Choose whether to allow both HTTP and HTTPS or enforce a redirect from HTTP to HTTPS for secure content delivery.
+
+---
+
+## 3. Configure and Deploy the Distribution
+
+1. **Cache Behavior Settings**:  
+   Adjust how CloudFront caches content, including request handling and object caching duration.  
+
+
+2. **Distribution Settings**:  
+   Choose your pricing class, add alternate domain names (CNAMEs) if needed, and configure SSL certificates for custom domains.
+
+3. **Review and Deploy**:  
+   After reviewing your settings, click `Create Distribution`. Deployment may take some time. Once complete, you'll receive a CloudFront domain name.
+
+   ![image](https://github.com/user-attachments/assets/55c2a766-2205-45ee-925d-52855eabe2c2)
+
+
+   When you click on your CloudFront distribution, you can copy your website url which is **Distribution Domain Name**
+
+   ![image](https://github.com/user-attachments/assets/f734ca3a-e215-4567-af83-77bbf2cb4b62)
+   
+ My website is now available with cloudFrond
+
+ ![image](https://github.com/user-attachments/assets/9c03a9b9-914b-4fdc-98d4-b7a1aad36216)
